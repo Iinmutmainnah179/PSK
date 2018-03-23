@@ -1,0 +1,18 @@
+#Annuitasbungamajemuknominal
+setwd("G:\\SEMESTER 4\\TUGAS\\PSK")
+annuitas <- function(num,i,k,n) 
+  switch(num, 
+         satu = {
+           pvanuitasakhir = k*((1-(1/(1+i)^n))/i)
+           akumulasianuitasakhir = k*((((1+i)^n)-1)/i)
+           cat("pv anuitas akhir adalah",pvanuitasakhir,"\n")
+           cat("nilai akumulasi anuitas akhir adalah",akumulasianuitasakhir,"\n")
+         },
+         dua = {
+           pvanuitasawal = k*((1-(1/(1+i)^n))/(i*((1/(1+i)))))
+           akumulasianuitasawal = k*((((1+i)^n)-1)/(i*((1/(1+i)))))
+           cat("pv anuitas awal adalah",pvanuitasawal,"\n")
+           cat("nilai akumulasi anuitas awal adalah",akumulasianuitasawal,"\n")
+         }
+         )
+       
